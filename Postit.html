@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PostIt - Secure Posting</title>
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="postit.css">
+</head>
+
+<body>
+
+    <!-- Main container -->
+    <div class="container">
+
+        <h1>POSTIT</h1>
+        <p class="subtitle">Secure Caption Posting System</p>
+
+        <!-- User Information Form -->
+        <section id="userSection" class="card">
+            <h2>Create User</h2>
+            <p>Enter your information once before posting.</p>
+
+            <input type="text" id="fullName" placeholder="Full Name">
+            <input type="date" id="dateOfBirth">
+
+            <select id="yearLevel">
+                <option value="">Select Year Level</option>
+                <option>1st Year</option>
+                <option>2nd Year</option>
+                <option>3rd Year</option>
+                <option>4th Year</option>
+            </select>
+
+            <select id="gender">
+                <option value="">Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Prefer not to say</option>
+            </select>
+
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+
+            <button onclick="saveUser()">Continue</button>
+        </section>
+
+        <!-- Posting Section -->
+        <section id="postSection" class="card hidden">
+
+            <h2 id="welcomeUser"></h2>
+
+            <!-- Caption input -->
+            <textarea id="postText"
+                placeholder="Write your caption here..."></textarea>
+
+            <button onclick="addPost()">POST</button>
+
+            <!-- Thread of posts -->
+            <div id="postThread"></div>
+
+        </section>
+
+    </div>
+
+    <!-- JavaScript file -->
+    <script src="postit.js"></script>
+
+</body>
+</html>
